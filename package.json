@@ -1,0 +1,21 @@
+{
+  "name": "star-chart",
+  "version": "1.0.0",
+  "private": true,
+  "description": "大盘星图 — 东方财富 stockhotmap 完美复刻",
+  "scripts": {
+    "dev": "pnpm --filter @star-chart/web dev",
+    "dev:all": "concurrently -n web,server -c blue,magenta \"pnpm --filter @star-chart/web dev\" \"pnpm --filter @star-chart/server dev\"",
+    "build": "pnpm --filter @star-chart/web build",
+    "start": "pnpm --filter @star-chart/server start",
+    "lint": "pnpm -r lint",
+    "typecheck": "pnpm -r typecheck"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "packageManager": "pnpm@11.9.0",
+  "engines": {
+    "node": ">=20"
+  }
+}
